@@ -26,13 +26,10 @@ app.get('/greeting/:name', (req, res) => {
   });
 
   // Tip calculator
-// app.get('/tip', (req, res)=> {
-//     res.render('tip', {
-//         pageTitle: "total",
-//             pageHeader: "tipPercentage",
-//             data: "tip"
-//     })
-// })
+app.get('/tip/:total/:tipPercentage', (req, res)=> {
+    res.send(req.params.tipPercentage)
+    })
+
 // Your app should have a route of '/tip' and it should expect 2 params. One should be total and one should be tipPercentage.
 
 // When hitting the route, the page should display
